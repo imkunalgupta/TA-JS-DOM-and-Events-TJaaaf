@@ -1,27 +1,27 @@
-let output = document.querySelector('.result');
-let btn = document.querySelectorAll('button');
+let display = document.querySelector(".display");
+let allBtn = document.querySelectorAll("button");
 let initialValue = 0;
-
-
-output.innerText = initialValue;
-
-
-
-function handleBtn(event) {
-    if(event.target.classList.contains("equalto")) {
-        output.innerText = eval(output.innerText);
+function handleBtnClick(event) {
+    if(event.target.classList.contains("equal")){
+        display.innerText = eval(display.innerText);
         return;
     }
-    output.innerText += event.target.innerText;
+    if(event.target.classList.contains("clear")){
+        display.innerText = initialValue;
+        return;
+    }
+    if(display.innerText == initialValue) {
+    display.innerText = event.target.innerText;
+    } else {
+        display.innerText += event.target.innerText;
+    }
+    
 }
-
-btn.forEach(b => {
-    b.addEventListener('click', handleBtn)
+allBtn.forEach((btn) => {
+    btn.addEventListener("click", handleBtnClick)
 });
 
+display.innerText = initialValue;
 
-let clear = document.querySelector('#clear');
 
-clear.addEventListener('click', () => {
-    output.innerText = initialValue;
-});
+

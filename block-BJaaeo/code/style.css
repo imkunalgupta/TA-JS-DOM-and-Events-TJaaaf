@@ -29,100 +29,37 @@ ol,
 ul {
   list-style: none;
 }
-
-.wrapper {
-    width: 50%;
-}
-
-
-.result {
-    width: 100%;
-    padding: 24px;
-    background-color: black;
-    border-radius: 12px;
-    color: white;
-    margin: 12px;
-    font-size: 4rem;
-    height: 120px;
-    display: flex;
-    justify-content: right;
-}
-
-.operator {
-    height: 120px;
-    width: 160px;
-    background-color: #710133;
-    color: white;
+.heading{
     text-align: center;
-    padding: 24px;
+    margin-top: 2rem;
+}
+.container{
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.display{
+    background-color: black;
+    color: white;
+    padding: 1.2rem;
+    font-size: 2rem;
+    text-align: right;
     border-radius: 10px;
-    margin: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-    font-weight: bold;
-    cursor: pointer;
+    font-weight: 800;
 }
 
-.operation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 20px 0;
-    width: 100%;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-.digits {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 20px 0;
-    width: 80%;
-}
-
-#clear {
-    background-color: #3d1b10;
-    color: #b2d1d6;
-}
-
-.box {
-    background-color: #cfcfcf;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 120px;
-    width: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
-    font-weight: bold;
-    color: black;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.equalto {
-    margin-top: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
-    padding: 20px 0;
-    width: 160px;
-    height: 520px;
-    background-color: #018080;
-    color: black;
-    font-size: 4rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
+.grid-container{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    grid-template-areas: 
+    "plus minus multiply divide"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "dot zero clear equal";
 }
