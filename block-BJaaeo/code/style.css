@@ -1,0 +1,128 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+  
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+  
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-align: center;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.wrapper {
+    width: 50%;
+}
+
+
+.result {
+    width: 100%;
+    padding: 24px;
+    background-color: black;
+    border-radius: 12px;
+    color: white;
+    margin: 12px;
+    font-size: 4rem;
+    height: 120px;
+    display: flex;
+    justify-content: right;
+}
+
+.operator {
+    height: 120px;
+    width: 160px;
+    background-color: #710133;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    border-radius: 10px;
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.operation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    width: 80%;
+}
+
+#clear {
+    background-color: #3d1b10;
+    color: #b2d1d6;
+}
+
+.box {
+    background-color: #cfcfcf;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 120px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.equalto {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    padding: 20px 0;
+    width: 160px;
+    height: 520px;
+    background-color: #018080;
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
