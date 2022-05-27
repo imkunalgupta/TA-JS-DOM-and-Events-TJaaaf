@@ -62,7 +62,7 @@ li {
     padding: 32px;
 }
 
-.select {
+.selected {
     color: black;
     background-color: cyan;
     border-radius: 50%;

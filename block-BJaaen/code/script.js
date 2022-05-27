@@ -1,7 +1,7 @@
-let user = document.querySelector('.usericon');
-let computer = document.querySelector('.computericon');
-let result = document.querySelector('.result');
-let set = document.querySelector('.reset');
+let user = document.querySelector(".usericon");
+let computer = document.querySelector(".computericon");
+let result = document.querySelector(".result");
+let reset = document.querySelector(".reset");
 
 
 let dataSet = [
@@ -10,48 +10,53 @@ let dataSet = [
         beats: "scissors",
     },
     {
-        name: "scissors",
-        beats: "paper",
-    },
-    {
         name: "paper",
         beats: "rock",
     },
+    {
+        name: "scissors",
+        beats: "paper",
+    },
 ];
+let userSelected = {}, computerSelected = {};
 
-let userSelect = {}, computerSelect = {};
-
-function winner(u, c) {
-    if (u.name === c.name) {
+function getWinner(user, computer) {
+    if(user.name === computer.name){
         result.innerText = "It's a Tie";
-    } else if (u.beats === c.name) {
-        result.innerText = "You Won!";
+    } else if(user.beats === computer.name){
+        result.innerText = " 🎁🎁 User Wins 🎁🎁";
     } else {
-        result.innerText = "You Lost..";
+        result.innerText = " ⚔️⚔️ Computer Wins ⚔️⚔️";
     }
-
 }
 
-function randomNumber(max = 3) {
+function getRandomNumber(max = 3) {
     return Math.floor(Math.random() * max);
 }
+
 
 function layoutUser() {
     user.innerHTML = "";
     dataSet.forEach((icon) => {
-        let li = document.createElement('li');
-        let i = document.createElement('i');
+        let li = document.createElement("li");
+        let i = document.createElement("i");
         i.className = `fa fa-hand-${icon.name}-o`;
-        if (userSelect.name === icon.name){
-            li.classList.add("select");
+
+        if(userSelected.name === icon.name){
+            li.classList.add("selected");
         }
-        li.addEventListener('click', () => {
-            userSelect = icon;
-            computerSelect = dataSet[randomNumber()];
-            winner(userSelect, computerSelect);
-            layoutUser();
-            layoutComputer();
-        })
+        
+
+        li.addEventListener("click", () => {
+            userSelected = icon;
+
+            computerSelected = dataSet[getRandomNumber()];
+
+            getWinner(userSelected, computerSelected);
+            
+            rerender();
+            console.log(userSelected, computerSelected);
+        });
         li.append(i);
         user.append(li); 
     });
@@ -63,12 +68,14 @@ layoutUser();
 function layoutComputer() {
     computer.innerHTML = "";
     dataSet.forEach((icon) => {
-        let li = document.createElement('li');
-        let i = document.createElement('i');
+        let li = document.createElement("li");
+        let i = document.createElement("i");
+        
         i.className = `fa fa-hand-${icon.name}-o`;
-        if (computerSelect.name === icon.name){
-            li.classList.add("select");
+        if(computerSelected.name === icon.name){
+            li.classList.add("selected");
         }
+
         li.append(i);
         computer.append(li); 
     });
@@ -76,9 +83,13 @@ function layoutComputer() {
 
 layoutComputer();
 
-set.addEventListener('click', () => {
-    userSelect = {};
-    computerSelect = {};
-    layoutUser();
+reset.addEventListener("click", () => {
+     userSelected = {};
+     computerSelected = {};
+     rerender();
+})
+
+function rerender () {
     layoutComputer();
-});
+     layoutUser();
+}
