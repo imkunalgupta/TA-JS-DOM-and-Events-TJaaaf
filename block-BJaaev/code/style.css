@@ -1,0 +1,243 @@
+/*--css reset--*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*----- CUSTOM STYLING ------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  line-height: 1.5;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-color: rgb(252, 237, 216);
+}
+
+.container {
+  background-color: rgba(136, 230, 247, 0.56);
+  border-radius: 0.41rem;
+  box-shadow: 7px 16px 20px rgb(189, 168, 140);
+  width: 600px;
+  padding: 1.5rem 2rem;
+}
+::placeholder {
+  color: #c5c5c5;
+  font-weight: 500;
+}
+span {
+  display: none;
+  right: 2rem;
+  position: absolute;
+}
+li:hover span {
+  display: block;
+  cursor: pointer;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 1.2rem 1rem;
+  box-shadow: 8px 4px 10px rgb(0, 0, 0, 0.233);
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  text-align: center;
+  outline: none;
+}
+li {
+  padding: 1rem;
+  border-bottom: 2px dashed grey;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+label {
+  vertical-align: center;
+  font-size: 2rem;
+  color: rgb(78, 70, 70);
+  padding: 1rem;
+  font-family: 'Comforter', cursive ;
+  font-weight: 600;
+  
+}
+input[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+  float: left;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: grey;
+  font-style: italic;
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border: 1px solid #d8d8d8;
+  background-color: white;
+  margin: 10px 3px;
+  padding: 5px 16px;
+  color: #777777;
+  font-size: 14px;
+  box-shadow: 10px 2px 12px rgba(2,0,0,0.233);
+  border-radius: 4px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #bdbdbd;
+}
+.selected {
+  color: white !important;
+  background-color: #e77575 !important;
+}
+
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+}
+.flex-2{
+    flex: 0 1 18%;
+}
