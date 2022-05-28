@@ -188,7 +188,7 @@ label {
   font-size: 2rem;
   color: rgb(78, 70, 70);
   padding: 1rem;
-  font-family: 'Comforter', cursive ;
+  font-family: 'Comforter' ;
   font-weight: 600;
   
 }
@@ -201,7 +201,7 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: grey;
-  font-style: italic;
+  font-style: normal;
 }
 h1 {
   font-size: 2.5rem;
